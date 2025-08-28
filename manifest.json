@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "SnapAnnotate PicGo Uploader",
+  "version": "1.0.0",
+  "description": "截图、标注，并上传到 PicGo/PicList 本地服务器。",
+  "permissions": ["activeTab", "scripting", "storage", "tabs", "clipboardWrite", "notifications"],
+  "host_permissions": ["http://127.0.0.1:36677/*", "http://localhost:36677/*"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html" },
+  "options_page": "options.html"
+}

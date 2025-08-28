@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, PingFang SC; margin: 20px; }
+    label { display: block; margin: 10px 0 6px; }
+    input[type="text"] { width: 520px; padding: 8px; border: 1px solid #ddd; border-radius: 8px; }
+    .row { margin-bottom: 14px; }
+    .tip { color: #666; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <h2>SnapAnnotate 设置</h2>
+  <div class="row">
+    <label>上传端点（PicGo/PicList）</label>
+    <input id="endpoint" type="text" value="http://127.0.0.1:36677/upload" />
+    <div class="tip">默认 PicGo/PicList 端口 36677；PicList 支持 multipart，也支持 ?key= 鉴权。</div>
+  </div>
+
+  <div class="row">
+    <label>接口密钥（可选，PicList：?key=）</label>
+    <input id="secretKey" type="text" placeholder="your-secret-key（留空则不带）" />
+  </div>
+
+  <div class="row">
+    <label><input id="useMultipart" type="checkbox" checked /> 优先使用 multipart/form-data（PicList 2.6.3+）</label>
+    <div class="tip">若失败，则自动退化为“剪贴板 + 空 JSON”方式（PicGo）。</div>
+  </div>
+
+  <button id="save">保存</button>
+  <span id="saved" class="tip"></span>
+
+  <script src="options.js"></script>
+</body>
+</html>

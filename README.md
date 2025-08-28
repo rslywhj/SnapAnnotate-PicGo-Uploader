@@ -1,1 +1,1 @@
-# Screenshot-and-upload
+# SnapAnnotate PicGo Uploader
